@@ -7,17 +7,22 @@ class Hello2 extends Component{
         this.state = {count: 1}
     }
 
-    handleClick = () => {
+    plusClick = () => {
         console.log("CLICK")
         this.setState({count: ++ this.state.count})
+    }
+
+    minusClick = () => {
+        console.log("CLICK")
+        this.setState({count: -- this.state.count})
     }
 
     render() {
         return(
             <>
             <h2>{this.state.count}</h2>
-            <button onClick= {this.handleClick}> + </button>
-            <button> - </button>
+            <button onClick= {this.plusClick}> + </button>
+            <button onClick= {this.minusClick}> - </button>
             </>
         )
     }
